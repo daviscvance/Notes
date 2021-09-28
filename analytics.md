@@ -41,7 +41,7 @@ happening in the future.
 
 ### Error Measurement
 
-![Hypothesis Table](https://screenshot.googleplex.com/9Y5kdQ9V9r43FHt.png)
+![Hypothesis Table](screenshots/error_types.png)
 
 ![Curve](https://upload.wikimedia.org/wikipedia/commons/4/4f/ROC_curves.svg)
 
@@ -90,9 +90,8 @@ effect which is helpful to the business.
 
 #### Resources
 
--   [GCS Data Science (SMI)](https://g3doc.corp.google.com/company/teams/smi/tools_documentation/statistics/power_analysis/index.md)
--   [UCLA Stats Consult (Intro to Power Analysis)](https://stats.idre.ucla.edu/other/mult-pkg/seminars/intro-power/)
--   [Stats Teacher - What is Power?](https://www.statisticsteacher.org/2017/09/15/what-is-power/)
--   [Monte Carlo Power Analysis](https://deliveroo.engineering/2018/12/07/monte-carlo-power-analysis.html)
--   [Russian Textbook PA](http://statsoft.ru/home/textbook/modules/stpowan.html)
--   [GCS-DS AIF Incremantality Design Doc](https://docs.google.com/document/d/1ENRo6jU2gPFOATpBy3ZVPRVLNUQ4nr5OIi4Yk0jJxa8/edit)
+-   Power Analysis
+    -   [UCLA Stats Consult (Intro to Power Analysis)](https://stats.idre.ucla.edu/other/mult-pkg/seminars/intro-power/)
+    -   [Stats Teacher - What is Power?](https://www.statisticsteacher.org/2017/09/15/what-is-power/)
+    -   [Monte Carlo Power Analysis](https://deliveroo.engineering/2018/12/07/monte-carlo-power-analysis.html)
+    -   [Russian Textbook PA](http://statsoft.ru/home/textbook/modules/stpowan.html)

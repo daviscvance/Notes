@@ -295,7 +295,8 @@ sotring fault-tolerant datasets distributed across a cluster.
 -   Installation and management of in-memory clusters and other devops tasks
     which are operationally difficult.
 -   Theres a 500ms latency when streaming with micro-batches of records, instead
-    of processing oen record at a time.
+    of processing one record at a time.
+-   Lack of native system to organize, store, and process data files (DFS).
 
 PaaS cloud-based distributed in-memory engines (GCP/ AWS/ Azure) have answered
 these operational frustrations by offering abilities cheaply to scale up or down
@@ -501,7 +502,7 @@ Common validations:
 
 ## Big O Notation
 
-![Big O Cheat](https://screenshot.googleplex.com/92KptCKpxZxuikJ.png)
+![Big O Cheatsheet](screenshots/big_o.png) |
 [source](https://www.bigocheatsheet.com/)
 
 ## Resources

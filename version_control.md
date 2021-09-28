@@ -1,27 +1,26 @@
-# Version Control Management using Fig (Mercurial)
+# Version Control Management using Mercurial (Hg)
 
 [TOC]
 
 ## Resources
 
-*   [Fig's Basics Codelab (go/fig-codelab)](http://go/fig-codelab)
-*   [Larger Fig Cheatsheet (go/fig-cli)](http://go/fig-cli)
-*   [Fig's Glossary (go/fig-glossary)](http://go/fig-glossary)
-*   [Fig's FAQ (go/fig-faq)](http://go/fig-faq)
+# link to hg references.
+
+*   [Murcurial Basics Codelab]()
+*   [Mercurial Cheatsheet]()
+*   [Mercurial Glossary]()
 
 ## Overview
 
 [Mercurial](https://www.mercurial-scm.org/) is an open source version control
 management tool and is often simplified as `hg` i.e. the chemical symbol of
-Mercury. Fig is Google's internal version based on `hg` and used in the CLI.
-Commits are chained together and branched in a number of ways to create a large
-tree (maybe an old fig, if you will). Each submission cooperates with all of its
-descendants,sending any changes down the line. See go/fig for more overview.
+Mercury. Commits are chained together and branched in a number of ways to create
+a large tree. Each submission cooperates with all of its descendants, sending
+any changes down the line.
 
 ### Example of a [Chain](https://www.youtube.com/watch?v=gGAiW5dOnKo)
 
-<span class="tiny_text" style="font-size:0.5em;">(Thanks
-[Mike](http://go/mikebeaumier))</span>
+<span class="tiny_text" style="font-size:0.5em;">(Thanks Mike Beaumier))</span>
 
 When you build a chain of CLs using `hg`, you may have all of these CLs reviewed
 in parallel even though they may sequentially depend on one another (e.g. the
@@ -31,8 +30,7 @@ child CLs.)
 Basically, when we change an upstream CL, all downstream CLs are orphaned (a
 turn of phrase used because the parent is gone).
 
-Here's an example from the
-[codelab](https://g3doc.corp.google.com/codelab/fig/g3doc/index.md):
+Here's an example from the # link to an example
 
 <pre><code class="no-auto-prettify lang-shell">$ <strong>hg xl</strong>
 @  <span class="hash-draft"><span class="hash-prefix">10</span>adedc1</span> <span class="xl-user">{{USERNAME}}</span> <span class="xl-tag">cl/131000007</span> <span class="xl-tag">tip</span> <span class="will-update">&lt;will update http://cl/131000007&gt;</span>
@@ -63,11 +61,11 @@ the parent to the new children.
 *   Upload revision with `hg uc`
 *   Submit the final result `hg submit`
 
-IMPORTANT: Every CL you upload with Fig will exist inside its own separate CitC
-client. You should usually amend your CLs inside the Fig workspace and then
+IMPORTANT: Every CL you upload with Hg will exist inside its own separate CitC
+client. You should usually amend your CLs inside the Hg workspace and then
 re-upload them, instead of editing the other clients directly. If you do end up
-editing a CL's client directly, you can (pull the edits back into your Fig
-workspace)[http://go/fig-faq#pull-back].
+editing a CL's client directly, you can (pull the edits back into your Hg
+workspace) # link to #pull-back].
 
 WARNING: Lossy CLs should NOT be submitted via the Critique UI.
 
@@ -84,7 +82,7 @@ WARNING: Lossy CLs should NOT be submitted via the Critique UI.
 | Description                            | Command                             |
 | -------------------------------------- | ----------------------------------- |
 | Create a new CitC client managed by    | `hgd -f <myworkspacename>`          |
-: fig                                    :                                     :
+: Hg                                    :                                     :
 | Add a file to a commit                 | `hg add`                            |
 | Commit changes                         | `hg commit`                         |
 | See history of changes                 | `hg xl`                             |

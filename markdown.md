@@ -2,8 +2,8 @@
 
 [TOC]
 
+# TOOD(DCV): Add github link.
 The source for this file is found at
-[this link here](https://source.corp.google.com/piper///depot/company/users/davisv/g3doc/notes/markdown.md).
 
 ## Double Hash (#) Heading {#custom-id}
 
@@ -117,20 +117,17 @@ IMPORTANT: **Important** messages start with `IMPORTANT`
 
 ## Diagrams / Flowcharts
 
-go/graphviz-ref
+# link to graphviz ref
 
 Wrap syntax in a code-block using the dot langugage, or reference the dot file:
 
 > \<!--#include file="relative/path/to/graph.dot"-->
 
-TIP Heres a
-[documentation_example](https://source.corp.google.com/piper///depot/company/teams/sas_bi/gcs_core_data/rsm/rsm_targets.dot)
-displayed
-[here](https://g3doc.corp.google.com/company/teams/sas_insights/FAQ/resource_management/rsm_home.md)
+# TODO(DCV): Add TIP to an example link.
 
 --------------------------------------------------------------------------------
 
-go/graphviz-syntax-reference
+# link to graphviz syntax reference
 
 ```dot
 digraph {
@@ -161,13 +158,13 @@ digraph {
 
 ```dot
 digraph {
-  stylesheet="https://g3doc.corp.google.com/frameworks/g3doc/includes/graphviz-style.css"
+  stylesheet= # Would include graphviz-style.css here.
   node [shape=box, style=rounded]
   nodesep = 0
 
   // Top layer
   { rank = same
-    node [id=googleblue]
+    node [id=blue]
     Browser [shape=egg]
     Mobile [label="Mobile Apps", shape=egg] }
 
@@ -176,11 +173,11 @@ digraph {
     node [width=1.5, id=grey]
     UI1 [label="Account Central"]
     UI2 [label="Oz"]
-    node [id="dark googleblue"]
+    node [id="dark blue"]
     UI3 [label="PhotosUi"]
     UI4 [label="TauUi"]
     UI5 [label="..."]
-    UI6 [label="DataMixer API", width=1.5, id="dark googlegreen"] }
+    UI6 [label="DataMixer API", width=1.5, id="dark green"] }
 
   // Data mixer layer
   DataMixer [width=9, id=orange]
@@ -207,7 +204,7 @@ digraph {
 
 ```dot
 digraph {
-  graph [stylesheet="https://g3doc.corp.google.com/frameworks/g3doc/includes/graphviz-style.css"]
+  graph [stylesheet=" # would include graphviz-style.css"]
   node [shape=box, style=rounded]
   rankdir = BT
   splines = ortho
@@ -236,27 +233,27 @@ digraph {
 
 
   // Declare the edges between the nodes
-  In -> Pre -> Interceptors -> Action [id=googleblue]
-  Out -> Post [dir=back, id=googleblue]
+  In -> Pre -> Interceptors -> Action [id=blue]
+  Out -> Post [dir=back, id=blue]
   { rank = same; In -> Out [style=invisible, arrowsize=0] }
 
-  Post -> Response -> Interceptors -> Action [dir=back, id=googlegreen]
-  Response -> Exception [id=googlered]
+  Post -> Response -> Interceptors -> Action [dir=back, id=green]
+  Response -> Exception [id=red]
 
-  Exception -> Interceptors -> Action [dir=back, id=googlered]
-  Response -> Exception [dir=back, id=googlegreen]
+  Exception -> Interceptors -> Action [dir=back, id=red]
+  Response -> Exception [dir=back, id=green]
 }
 ```
 
 --------------------------------------------------------------------------------
 
-Sequence Diagram. go/g3doc-diagrams.
+Sequence Diagram. # link to diagrams.
 
 ```sequence-diagram
 participant B
 participant Class\nA as A  [fillcolor="#3369e8", fontcolor="white"]
 Title: Here is a title
-A->B: Normal line with `go/link` [href="http://go/g3doc-sequence-diagrams"]
+A->B: Normal line with `go/link` [href=" # link to sequence-diagrams"]
 B-->C: Dashed line [fontcolor="red"]
 C->>D: Open arrow
 D-->>A: Dashed open arrow
@@ -264,7 +261,7 @@ D-->>A: Dashed open arrow
 
 ## Math
 
-go/g3doc-mathjax
+# link to mathjax reference
 
 MathJax is a JavaScript library that renders and styles mathematical expressions
 in Tex/LaTex and MathML.

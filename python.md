@@ -291,33 +291,30 @@ Evaluate memory use: `%memit RunFunction(df)`
 Line profiler runs on a certain command to profile the execution
 [magic-prun](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-prun).
 
-### Binaries and Ad Hoc Imports
-
-go/colab_binary go/adhoc-import
-
 #### I/O
 
 <section class="zippy" style="margin-left: 40px; border: 1px solid #ddd;">
   <h5>Upload a file to a cloud instance from your local machine.</h5>
 
 ```python
-from colabtools import fileedit
-uploaded = fileedit.upload_files()
+import some_tool
+uploaded = some_tool.upload_files()
 csv = uploaded.files['example.csv']
 ```
 
 Now we have a copy of example.csv in the runtime.
+
 </section>
 
 <section class="zippy" style="margin-left: 40px; border: 1px solid #ddd;">
-  <h5>Read a CNS file.</h5>
+  <h5>Read a file.</h5>
 
 ```python
-from google3.pyglib import gfile
+# TODO(DCV): Replace file_opener
 
 action_path = '/system/cell/home/my_data_path/ttl=180d/upload.csv'
-for f in gfile.Glob(action_path):
-  df = pd.read_csv(gfile.Open(f))
+for f in file_opener.Glob(action_path):
+  df = pd.read_csv(file_opener.Open(f))
 ```
 
 </section>
@@ -326,12 +323,12 @@ for f in gfile.Glob(action_path):
   <h5>F1 Client Query Builder (Not recommended).</h5>
 
 ```python
-# TODO: Add imports.
+# TODO: Add imports. Connect to a SQL engine.
 
-client = f1_client.Client('/f1/query/prod')
-query_request = f1_client.QueryBuilder(
-    f1_client.RequestOptions(),
-    'SELECT * FROM davisv.MyTable', None)
+client = sql_engine.Client('database')
+query_request = sql_engine.QueryBuilder(
+    sql_engine.RequestOptions(),
+    'SELECT * FROM dcv.MyTable', None)
 
 # TODO: Efficiently build a dataframe.
 
@@ -351,12 +348,9 @@ TODO: Add visualization notes.
 
 #### Logging / Debugging
 
-go/pythonlogging absl.logging
+# link to a logging reference
 
 -   Logging is automatically in C++ mode `logging.use_cpp_logging()`
 -   Can switch to python logging mode with `logging.use_python_logging()`
 
-go/@dbg New powerful debugger in Cider
-
--   pdb is standard, but can be difficult to use
--   pdb requires trace points in a running program
+# tracer notes
